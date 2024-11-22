@@ -1,0 +1,189 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* #jsonInput {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 10px;
+} */
+
+/* .preview-area, .picture-area {
+    width: 1000px;
+    margin-bottom: 20px;
+} */
+.preview-area {
+  overflow-y: scroll;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 30px;
+  align-items: center;
+}
+
+.canvas-area {
+  overflow-y: scroll;
+  display: flex;
+  /* flex-direction: column; */
+  gap: 30px;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.cover-card-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+/* .card.cover-card{
+  background-image: url(./assets/img/cover-card@4x.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+.cover-card-content,
+.detail-card-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+.cover-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover-card-content>.card-title {
+  margin: 0 40px 20px;
+  font-size: 30px;
+  line-height: 1.4;
+  font-weight: bold;
+  flex: 1;
+}
+.detail-card-content{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detail-card-content>.card-title {
+  margin: 0 40px;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: bold;
+  margin-top: 65px;
+}
+
+.detail-card-content>.card-content {
+  flex: 1;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.detail-card-content .card-item:last-child{
+  margin-bottom: 60px;
+}
+.card-item{
+  margin: 0 40px;
+  flex: 1;
+}
+.card-item>.card-subtitle {
+  font-size: 15px;
+  font-weight: bold;
+}
+.card-item>.card-subtitle::before{
+  content: "🤗 ";
+}
+.card-item>.card-subcontent{
+  font-size: 13px;
+}
+.card-item>.card-subcontent>span{
+  position: relative;
+}
+.card-item>.card-subcontent>span::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: -1;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #fef08a;
+}
+.thumb1 .card-item{
+  padding-top: 10px;
+}
+.thumb1 .card-item>.card-subtitle::before{
+  content: "🤗 ";
+}
+/* .card-det-title {
+  font-size: 15px;
+  font-weight: bold;
+  left: 20px;
+  border-bottom: 1px solid #000;
+} */
+
+/* .textbox {
+  left: 20px;
+  width: 240px;
+  font-size: 15px;
+  color: #29FE82;
+  word-wrap: break-word;
+  background-color: rgba(40, 39, 41, 0.9);
+  margin: 10px;
+}
+
+.textbox-intro {
+  top: 60px;
+}
+
+.textbox-content {
+  top: 60px;
+}
+
+.textbox-content-2 {
+  top: 120px;
+}
+
+.textbox-content-3 {
+  top: 180px;
+}
+
+.textbox-content-4 {
+  top: 240px;
+}
+
+.textbox-content-5 {
+  top: 300px;
+}
+
+.card-image-wrapper {
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid #ccc;
+  padding: 3px;
+} */
+
+/* Add more specific styles as needed */
