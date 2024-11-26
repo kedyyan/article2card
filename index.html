@@ -18,6 +18,13 @@
                 <button id="kimiBtn" class="w-full bg-purple-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-purple-700">发送到 Kimi 分析</button>
             </div>
             <textarea id="jsonInput" class="flex-1 w-full p-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" placeholder="输入 AI 帮你总结的结构化文本"></textarea>
+            <div class="flex items-center gap-2 mb-4">
+                <label for="templateSelector" class="text-gray-700">选择背景模板:</label>
+                <select id="templateSelector" class="p-2 border border-gray-300 rounded-lg">
+                    <option value="default">默认</option>
+                    <option value="Climber">Climber</option>
+                </select>
+            </div>
             <div class="flex gap-4 mt-4">
                 <button id="convertBtn" class="flex-1 bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700">点击预览</button>
                 <button id="generatePicBtn" class="flex-1 bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700">没毛病出图</button>
@@ -39,13 +46,6 @@
         </div>
         
     </div>
-    <!-- <div class="input-container my-4 p-4 bg-white rounded-lg shadow-md">
-        <textarea id="jsonInput" class="w-full p-2 text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500" placeholder="输入 AI 帮你总结的结构化文本"></textarea>
-        <button id="convertBtn" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg mx-2 hover:bg-blue-700">一键转换</button>
-    </div> -->
-    <!-- <div id="previewArea" class="preview-area my-4 p-4 bg-white rounded-lg shadow-md"></div>
-    <button id="generatePicBtn" class="bg-green-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-700">没毛病出图</button>
-    <div id="pictureArea" class="picture-area mt-4 p-4 bg-white rounded-lg shadow-md"></div> -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
