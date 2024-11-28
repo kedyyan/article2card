@@ -12,15 +12,26 @@ document.getElementById('kimiBtn').addEventListener('click', function() {
     window.open(kimiUrl, '_blank');
 });
 
-document.getElementById('convertBtn').addEventListener('click', function() {
-    const jsonInput = document.getElementById('jsonInput').value;
+document.getElementById('convertBtn').addEventListener('click', async function() {
+    const jsonInput = document.getElementById('jsonInput').value.trim();
+    if (!jsonInput) {
+        alert('请输入要转换的JSON');
+        return;
+    }
+
     try {
-        const jsonData = JSON.parse(jsonInput);
-        renderCards(jsonData);
-    } catch (e) {
-        alert('Please enter a valid JSON structure.');
+        const data = JSON.parse(jsonInput);
+        // 如果有AudioContext相关代码，在用户交互时初始化
+        if (window.audioContext) {
+            await window.audioContext.resume();
+        }
+        await renderCards(data);
+    } catch (error) {
+        console.error('Error:', error);
+        alert('JSON格式错误或转换失败');
     }
 });
+
 document.getElementById('generatePicBtn').addEventListener('click', async function() {
     const cards = document.querySelectorAll('.card');
     const pictureArea = document.getElementById('pictureArea');
