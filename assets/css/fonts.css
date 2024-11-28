@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'DingTalk JinBuTi';
+    src: url('../fonts/DingTalk_JinBuTi_Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zhuque Fangsong';
+    src: url('../fonts/ZhuqueFangsong-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
