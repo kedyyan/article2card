@@ -53,11 +53,12 @@ body {
   height: 100%;
 }
 
-/* .card.cover-card{
-  background-image: url(./assets/img/cover-card@4x.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+.cover-card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .cover-card-content,
 .detail-card-content {
   position: absolute;
@@ -82,16 +83,18 @@ body {
   font-weight: bold;
   flex: 1;
 }
-.detail-card-content{
+
+.detail-card-content {
   display: flex;
   flex-direction: column;
-  gap: 7px;
-  padding: 65px 0 60px;
+  gap: 3px;
+  padding: 55px 0 10px;
+  margin-bottom: 10px;
 }
 
 .detail-card-content>.card-title {
   font-family: 'DingTalk JinBuTi', sans-serif;
-  margin: 0 40px;
+  margin: 10px 40px 0;
   font-size: 20px;
   line-height: 1.4;
   text-align: justify;
@@ -109,51 +112,39 @@ body {
   margin-top: 20px;
 }
 
-.detail-card-content .card-item:last-child{
-  margin-bottom: 0;
+.detail-card-content>.card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 1px;
 }
 
-.card-item{
+.card-item {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-
-.card-item>.card-subtitle {
-  font-size: 15px;
-  font-weight: bold;
-  font-family: 'Zhuque Fangsong', serif;
-}
-
-.card-item>.card-subtitle::before{
-  content: "👉 ";
-}
-
-.card-item>.card-subcontent{
-  font-size: 13px;
-  font-family: 'Zhuque Fangsong', serif;
-  line-height: 1.6;
-}
-
-.card-item{
   margin: 0 40px;
-  flex: 1;
 }
+
 .card-item>.card-subtitle {
+  font-family: 'Zhuque Fangsong', serif;
   font-size: 15px;
   font-weight: bold;
-  font-family: 'Zhuque Fangsong', serif;
 }
+
 .card-item>.card-subtitle::before{
   content: "👉 ";
 }
+
 .card-item>.card-subcontent{
   font-size: 13px;
   font-family: 'Zhuque Fangsong', serif;
 }
+
 .card-item>.card-subcontent>span{
   position: relative;
 }
+
 .card-item>.card-subcontent>span::after{
   content: "";
   position: absolute;
@@ -165,59 +156,52 @@ body {
   border-radius: 10px;
   background-color: #fef08a;
 }
+
 .thumb1 .card-item{
   padding-top: 5px;
 }
+
 .thumb1 .card-item>.card-subtitle::before{
   content: "👉 ";
 }
-/* .card-det-title {
+
+.card-item .card-subtitle {
+  font-family: 'Zhuque Fangsong', serif !important;
   font-size: 15px;
   font-weight: bold;
-  left: 20px;
-  border-bottom: 1px solid #000;
-} */
-
-/* .textbox {
-  left: 20px;
-  width: 240px;
-  font-size: 15px;
-  color: #29FE82;
-  word-wrap: break-word;
-  background-color: rgba(40, 39, 41, 0.9);
-  margin: 10px;
+  position: relative;
+  padding-left: 25px;  /* 为emoji留出空间 */
 }
 
-.textbox-intro {
-  top: 60px;
+.card-item .card-subtitle::before {
+  content: "👉";
+  position: absolute;
+  left: 0;
 }
 
-.textbox-content {
-  top: 60px;
+.card-item .card-subcontent {
+  font-family: 'Zhuque Fangsong', serif !important;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #333;
 }
 
-.textbox-content-2 {
-  top: 120px;
+.card-item .card-subcontent > span {
+  position: relative;
+  z-index: 1;
 }
 
-.textbox-content-3 {
-  top: 180px;
+.card-item .card-subcontent > span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  z-index: -1;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #fef08a;
 }
-
-.textbox-content-4 {
-  top: 240px;
-}
-
-.textbox-content-5 {
-  top: 300px;
-}
-
-.card-image-wrapper {
-  display: inline-block;
-  margin: 5px;
-  border: 1px solid #ccc;
-  padding: 3px;
-} */
 
 .card-image-wrapper {
     margin: 10px;
@@ -275,4 +259,28 @@ body {
     z-index: 1;
 }
 
-/* Add more specific styles as needed */
+.cover-card-bg img,
+.detail-card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-card-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.detail-card-bg img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: bottom;
+}
